@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>24 Silver Home</title>
+        <link rel="icon" href="24.ico" type="image/x-icon">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">  
+        <style>
+            body
+            {                               
+                background-repeat: no-repeat;
+                background-image: linear-gradient(to top, #FFFFFF, #4d2600);
+
+            }
+            header
+            {
+                color:white;
+                background-image: url(6.jpg);                
+                margin: 100px;margin-top:20px;margin-bottom: 0px;                                
+                padding:2.5em;padding-top:0em;padding-bottom: 0em;
+           }
+           footer
+           {
+                font-size: 0.85em;
+                color:white;
+                background-image: url(6.jpg);
+                opacity: 0.8;               
+                margin: 100px;margin-top:20px;margin-bottom: 10px;
+                padding:1em;
+           }        
+           .nav1
+           {                               
+                opacity: 0.7;               
+           }
+            #headerBack
+            {                 
+                background-image: url(top2.jpg), url(6.jpg);   
+                background-position: left top, left top;   
+                background-repeat: no-repeat, repeat;                               
+                margin: 0;margin-top:20px;margin-bottom: 0px;                              
+                padding: 1px;  
+                font-weight: bold;
+            }
+            #SignIn
+            {
+                float: right;               
+            }
+            
+            section 
+            {       
+                max-width: 100%;                                 
+                background-color: #4d2600;
+                margin: 100px;margin-top:10px;margin-bottom: 20px;
+                padding: 0em;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);       
+            }            
+            *     
+            {           
+                box-sizing: border-box;   
+            }
+            
+            img    
+            {           
+                width: 100%;           
+                height: auto;   
+            }
+    
+            .row:after     
+            {           
+                content: "";           
+                clear: both;            
+                display: block;  
+            }
+    
+            [class*="col-"]    
+            {          
+                float: left;          
+                padding: 15px;           
+                width: 100%;                                 
+            }   
+    
+            @media only screen and (min-width: 600px)    
+            {            
+                .col-s-3 {width: 18%;}            
+                .col-s-6 {width: 75%;}           
+                .col-s-9 {width: 75%;}                                 
+                        
+                .responsive         
+                {                 
+                    width: 100%;            
+                }    
+            }
+                     
+            @media only screen and (min-width: 768px)     
+            {            
+                .col-3 {width: 18%;}            
+                .col-6 {width: 75%;}            
+                .col-9 {width: 75%;}                
+                
+                .responsive        
+                {        
+                    width: 100%;        
+                    margin: 8px;
+                    margin-left: 13px;
+                }
+            }
+            
+            .menu ul    
+            {          
+                list-style-type: none;           
+                margin: 0;     
+                opacity: 0.8;
+                padding: 1em;padding-top: 2em; 
+            }
+    
+            .menu li   
+            {            
+                padding: 8px;            
+                margin-bottom: 7px;            
+                background-color :#f2e6d9;   
+                color: #4d2600;           
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);   
+            }
+    
+            .menu li:hover    
+            {           
+                background-color: #d8b48d;
+            } 
+            
+            div.img    
+            {          
+                border: 1px solid #ccc;   
+            }
+    
+            div.img:hover     
+            {          
+                border: 1px solid #777;  
+            }
+    
+            div.img img     
+            {        
+                width: 100%;            
+                height: auto;   
+            }
+    
+            div.desc     
+            {            
+                padding: 5px;          
+/*                float: left;             */
+            }
+            
+            .responsive    
+            {            
+                padding: 0.3em; padding-top:0em;            
+                float: left;            
+                width: 30%;   
+            }
+
+            .floating-box 
+            {   
+                float: left;    
+                width: 100px;   
+                height: 135px;   
+                margin: 20px;margin-left: 120px;margin-bottom: 0px;    
+                text-align: center;
+            }
+            
+            .floating-box ul
+            {
+                text-align: left;
+            }
+            
+            .after-box 
+            {   
+                clear: left;  
+                text-align: center;
+                margin: 100px;margin-top: 0px;margin-bottom: 10px;
+                font-size: 0.81em;
+            }
+            
+            div .contained 
+            {    
+                position: relative;
+            }
+           
+            .topleft 
+            {    
+                position: absolute;   
+                top: 8px;    
+                left: 16px;    
+                font-size: 18px;
+            }
+            
+            .add
+            {                               
+                padding: 5px;          
+                clear: left;
+            }
+            nav a 
+            { 
+                text-decoration: none;        
+                display: block;
+            }
+            nav ul ul 
+            { 
+                position: absolute;         
+                background-color: #4d2600;  	 
+                padding: 0;        
+                display: none; 		 
+                text-align: left;
+
+            }
+
+            nav ul ul li 
+            { 
+/*                border: 1px solid  #00005D; 		 */
+                display: block;         
+                width: 7em;        
+                margin-left: 0; 
+            }
+
+            nav li:hover ul 
+            { 
+                display: block; 
+            }
+                     
+        </style>
+    </head>
+    
+    <body class="w3-container">
+        <script>
+            function myFunction() 
+            {
+                var x = document.getElementById("dropdown1");
+                if (x.className.indexOf("w3-show") == -1) 
+                {
+                    x.className += " w3-show";
+                } 
+                else 
+                {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+            function myFunction2() 
+            {
+                var x = document.getElementById("dropdown2");
+                if (x.className.indexOf("w3-show") == -1) 
+                {
+                    x.className += " w3-show";
+                } 
+                else 
+                {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }    
+        </script>          
+        <header>          
+            <div id="headerBack">              
+                <h1 style="color: white; text-align:left; font-variant: small-caps; font-style: oblique;font-size:3em;font-weight:bold; ">                       
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Silver Coffee</h1>            
+            </div>                    
+            <div class="nav1">                 
+                <nav>            
+                    <ul class="w3-navbar w3-card-2 w3-light-grey" style="font-style: oblique;">                                      
+                        <li><a href="index.html">Home</a></li>                                               
+                        <li><a href="MoreAboutUs1.html">More About Us</a></li>                                       
+                        <li><a href="Subpage_job.html">Jobs</a></li>               
+                        <li><a href="Menu.html">Menu</a></li>                                                            
+                        <li><a href="FeedbackForm.html">Feedback Form</a></li>                 
+                        <li class="w3-dropdown-click">                                   
+                            <a onclick="myFunction()" href="#">Shop <i class="fa fa-caret-down"></i></a>                                             
+                            <div id="dropdown1" class="w3-dropdown-content w3-white w3-card-4">                                              
+                                <a href="Product1.html">Espresso</a>                                            
+                                <a href="Product2.html">Iced Coffee</a>                                             
+                                <a href="Product3.html">Decaf</a>                                            
+                                <a href="Product4.html">Single Origin</a>                                        
+                            </div>                         
+                        </li>                                
+                        <li id="SignIn"><a onclick="myFunction2()" href="#">My Account</a>                               
+                            <span id="dropdown2" class="w3-dropdown-content w3-white w3-card-4">                                          
+                                <a href="SignIn1.html">Sign In</a>                    
+                                <a href="SignupHistory.html">Sign Up History</a>                                                                      
+                            </span>                
+                        </li>        
+                    </ul>             
+                </nav>            
+            </div>        
+    </header> 
+    
+        <section>          
+        <div class="row">
+        <div class="col-3 col-s-3 menu">
+             <nav>
+            <ul>
+                <li><a href="Product1.html">By Type</a> 
+                <ul>
+                            <li><a href="Product1.html">Espresso</a></li>                                            
+                            <li><a href="Product2.html">Iced Coffee</a></li>                                             
+                            <li><a href="Product3.html">Decaf</a></li>                                            
+                            <li><a href="Product4.html">Single Origin</a></li>                                                    
+                </ul> 
+                </li>
+
+                <li><a href="Product2.html">By Roast</a>
+                <ul>
+                            <li><a href="Product1.html">Light</a></li>                                            
+                            <li><a href="Product2.html">Medium</a></li>                                             
+                            <li><a href="Product3.html">Dark</a></li>                                            
+                </ul> 
+                </li>
+                
+                <li><a href="Product3.html">By Region</a>
+                <ul>
+                            <li><a href="Product1.html">The Americas</a></li>                                            
+                            <li><a href="Product2.html">Africa & Arabia</a></li>                                             
+                            <li><a href="Product3.html">Indo-Pacific</a></li>                                            
+                </ul> 
+                </li>
+
+                <li><a href="Product4.html">By Brand </a>
+                    <ul>
+                            <li><a href="Product1.html">Blue Bottle</a></li>                                            
+                            <li><a href="Product2.html">Counter Culture</a></li>                                             
+                            <li><a href="Product3.html">Intelligentsia</a></li>                                                           
+                    </ul> 
+                </li>
+            </ul>
+            </nav>
+        </div>                  
+            
+            <div class="col-6 col-s-9" style="background-color:#f2e6d9; opacity: 0.8;margin: 10px; margin-top: 30px; margin-right: 13px;">               
+                
+                <div class="contained">
+                    <span><img style="border-radius:8px;" src="halfc.jpg" alt="Coffee Bean"></span>  
+                <div class="topleft"><h2 style="color: whitesmoke;">Single Origin Coffee Favorites</h2></div>
+                </div>
+
+            <div class="responsive">                         
+                <div class="img">               
+                    <a target="_blank" href="a1.jpg">      
+                <img src="a1.jpg" alt="Trolltunga Norway" width="300" height="200">                
+                    </a>               
+                    <div class="desc">NAME 1&nbsp;
+                        <span><a href="#" style="background-color: #4d2600; color: white; position: relative;">
+                                &nbsp;&nbsp;ADD TO CART&nbsp;&nbsp;</a></span>
+                    </div> 
+
+                </div>    
+            </div>
+            
+            <div class="responsive">                         
+                <div class="img">               
+                    <a target="_blank" href="a2.jpg">      
+                <img src="a2.jpg" alt="Trolltunga Norway" width="300" height="200">                
+                    </a>               
+                    <div class="desc">NAME 2 &nbsp;
+                        <span><a href="#" style="background-color: #4d2600; color: white; position: relative;">
+                                &nbsp;&nbsp;ADD TO CART&nbsp;&nbsp;</a></span>
+                    </div> 
+                </div>    
+            </div>
+            
+            <div class="responsive">                         
+                <div class="img">               
+                    <a target="_blank" href="a3.jpg">      
+                <img src="a3.jpg" alt="Trolltunga Norway" width="300" height="200">                
+                    </a>               
+                    <div class="desc">NAME 3&nbsp;                
+                        <span><a href="#" style="background-color: #4d2600; color: white; position: relative;">
+                                &nbsp;&nbsp;ADD TO CART&nbsp;&nbsp;</a></span>
+                    </div> 
+                </div>    
+            </div>
+            
+            <div class="responsive">                         
+                <div class="img">               
+                    <a target="_blank" href="a4.jpg">      
+                <img src="a4.jpg" alt="Trolltunga Norway" width="300" height="200">                
+                    </a>               
+                    <div class="desc">NAME 4&nbsp;
+                        <span><a href="#" style="background-color: #4d2600; color: white; position: relative;">
+                                &nbsp;&nbsp;ADD TO CART&nbsp;&nbsp;</a></span>
+                    
+                    </div> 
+                </div>    
+            </div>            
+    
+            <div class="responsive">                         
+                <div class="img">               
+                    <a target="_blank" href="a5.jpg">      
+                <img src="a5.jpg" alt="Trolltunga Norway" width="300" height="200">                
+                    </a>               
+                    <div class="desc">NAME 5&nbsp;
+                        <span><a href="#" style="background-color: #4d2600; color: white; position: relative;">
+                                &nbsp;&nbsp;ADD TO CART&nbsp;&nbsp;</a></span>                  
+                    </div> 
+                </div>    
+            </div>                         
+    
+        </div>
+                
+        </div>
+            
+        </section>       
+        
+    <footer>   
+        <div style="float:left;">
+            <div class="floating-box">ABOUT US
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    
+                </ul>
+            </div>
+            
+            <div class="floating-box">SHOP
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    
+                </ul>
+            </div>
+            <div class="floating-box">FOR Business
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    
+                </ul>
+            </div>
+            
+            <div class="floating-box">JOIN US ON
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+            
+        <div class="after-box">
+        <p>&copy; 24 SILVER COFFEE. All Rights Reserved.                 
+            <a href="Subpage_TermsUse.html" style="color: white">|Terms of Use |</a>                
+            <a href="Subpage_Private.html" style="color: white">|Privacy Policy |</a>                
+            <a href="TermsSale.html" style="color: white">|Terms of Sale |</a>                
+        </p>            
+        <p><a href="mailto:webmaster@24Silver.com" style="color: white">webmaster@24Silver.com</a></p>
+        </div>
+    </footer>        
+    </body>
+</html>
+

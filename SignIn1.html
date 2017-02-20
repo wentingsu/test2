@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>24 Silver Home</title>
+        <link rel="icon" href="24.ico" type="image/x-icon">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">  
+        <style>
+            body
+            {                               
+                background-repeat: no-repeat;
+                background-image: linear-gradient(to top, #FFFFFF, #4d2600);
+            }
+            header
+            {
+                color:white;
+                background-image: url(6.jpg);                
+                margin: 100px;margin-top:20px;margin-bottom: 0px;                                
+                padding:2.5em;padding-top:0em;padding-bottom: 0em;
+           }
+           footer
+           {
+                font-size: 0.85em;
+                color:white;
+                background-image: url(6.jpg);
+                opacity: 0.8;               
+                margin: 100px;margin-top:20px;margin-bottom: 10px;
+                padding:1em;
+           }        
+           .nav1
+           {                               
+                opacity: 0.7;               
+           }
+            #headerBack
+            {                 
+                background-image: url(top2.jpg), url(6.jpg);   
+                background-position: left top, left top;   
+                background-repeat: no-repeat, repeat;                               
+                margin: 0;margin-top:20px;margin-bottom: 0px;                              
+                padding: 1px;                               
+            }
+            #SignIn
+            {
+                float: right;               
+            }
+            
+            section 
+            {       
+                max-width: 100%;   
+                margin: 100px;margin-top:10px;margin-bottom: 20px;
+                padding: 0em;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);       
+            }
+            
+            section 
+            {       
+/*                background-color:#fff3e6;*/
+                color: #fff7e6;
+                max-width: 100%;   
+                margin: 100px;margin-top: 20px;margin-bottom: 20px;
+                padding: 25em;padding-top: 1em;padding-bottom: 1em;
+/*                background-color: #fff7e6;*/
+            }
+            
+            section input[type=text], [type=password]
+            {
+                
+                width: 100%;   
+                padding: 12px 20px;   
+                margin: 8px 0;    
+                display: inline-block;   
+                border: 1px solid #ccc;   
+                border-radius: 4px;  
+                box-sizing: border-box;
+                font-size:1em
+        
+            }
+    
+            section button
+            {   
+                width: 100%;  
+                background-color: #f3c6a5;    
+                color: white;    
+                padding: 14px 20px;    
+                margin: 8px 0;   
+                border: none;   
+                border-radius: 4px;  
+                cursor: pointer;
+                font-size:1em
+            }
+
+   
+            section button:hover
+            {    
+                background-color: #b45918;
+            }
+            .signin{
+                  position:relative;              
+/*                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);       */
+/*                padding: 0em;*/
+
+                
+            }
+            
+            img 
+            {
+                width: 100%                         
+            }
+            
+            .floating-box 
+            {   
+                float: left;    
+                width: 100px;   
+                height: 135px;   
+                margin: 20px;margin-left: 120px;margin-bottom: 0px;    
+                text-align: center;
+            }
+            
+            .floating-box ul
+            {
+                text-align: left;
+            }
+            
+            .after-box 
+            {   
+                clear: left;  
+                text-align: center;
+                margin: 100px;margin-top: 0px;margin-bottom: 10px;
+                font-size: 0.81em;
+            }           
+        </style>
+    </head>
+    
+    <body class="w3-container">
+        <script>
+            function myFunction() 
+            {
+                var x = document.getElementById("dropdown1");
+                if (x.className.indexOf("w3-show") == -1) 
+                {
+                    x.className += " w3-show";
+                } 
+                else 
+                {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+            function myFunction2() 
+            {
+                var x = document.getElementById("dropdown2");
+                if (x.className.indexOf("w3-show") == -1) 
+                {
+                    x.className += " w3-show";
+                } 
+                else 
+                {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }    
+        </script>          
+        <header>          
+            <div id="headerBack">              
+                <h1 style="color: white; text-align:left; font-variant: small-caps; font-style: oblique;font-size:3em;font-weight: bold; ">                       
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Silver Coffee</h1>            
+            </div>                    
+            <div class="nav1">                 
+                <nav>            
+                    <ul class="w3-navbar w3-card-2 w3-light-grey" style="font-style: oblique;">                                      
+                        <li><a href="index.html">Home</a></li>                                               
+                        <li><a href="MoreAboutUs1.html">More About Us</a></li>                                       
+                        <li><a href="Subpage_job.html">Jobs</a></li>               
+                        <li><a href="Menu.html">Menu</a></li>                                                            
+                        <li><a href="FeedbackForm.html">Feedback Form</a></li>                 
+                        <li class="w3-dropdown-click">                                   
+                            <a onclick="myFunction()" href="#">Shop <i class="fa fa-caret-down"></i></a>                                             
+                            <div id="dropdown1" class="w3-dropdown-content w3-white w3-card-4">                                              
+                                <a href="Product1.html">Espresso</a>                                            
+                                <a href="Product2.html">Iced Coffee</a>                                             
+                                <a href="Product3.html">Decaf</a>                                            
+                                <a href="Product4.html">Single Origin</a>                                            
+                            </div>                         
+                        </li>                                
+                        <li id="SignIn"><a onclick="myFunction2()" href="#">My Account</a>                               
+                            <span id="dropdown2" class="w3-dropdown-content w3-white w3-card-4">                                          
+                                <a href="SignIn1.html">Sign In</a>                    
+                                <a href="SignupHistory.html">Sign Up History</a>                                                                      
+                            </span>                
+                        </li>        
+                    </ul>             
+                </nav>            
+            </div>        
+    </header> 
+        <section> 
+            <div class="signin">
+            <h2 style="text-align:center">Sign In</h2>
+            <h3 style="text-align:center"> Hello Fellow 24 Silver !</h3>           
+                    
+            <br><br>
+
+            <form>                
+            <label for="Cname">Username</label>              
+            <input id="username" type="text" name="username">
+            
+            <label for="Cpassword">Password</label>                        
+            <input id="password" type="password" name="password">
+                             
+            <button id="signIn" onclick="validateForm();">Sign In</button>
+      
+            <br><br>
+            <a href="signUp.html"> No account?  Sign up!</a> | 
+            <a href="resetPass.html">Forgot Password? </a>
+                
+        </form>
+            </div>
+        </section>  
+        
+            
+    <footer>   
+        <div style="float:left;">
+            <div class="floating-box">ABOUT US
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    
+                </ul>
+            </div>
+            
+            <div class="floating-box">SHOP
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    
+                </ul>
+            </div>
+            <div class="floating-box">FOR Business
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    
+                </ul>
+            </div>
+            
+            <div class="floating-box">JOIN US ON
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+            
+        <div class="after-box">
+        <p>&copy; 24 SILVER COFFEE. All Rights Reserved.                 
+            <a href="Subpage_TermsUse.html" style="color: white">|Terms of Use |</a>                
+            <a href="Subpage_Private.html" style="color: white">|Privacy Policy |</a>                
+            <a href="TermsSale.html" style="color: white">|Terms of Sale |</a>                
+        </p>            
+        <p><a href="mailto:webmaster@24Silver.com" style="color: white">webmaster@24Silver.com</a></p>
+        </div>
+    </footer>        
+    </body>
+</html>
+

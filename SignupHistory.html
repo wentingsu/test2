@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sign up History2</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="24.ico" type="image/x-icon">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">  
+
+        <style>
+            body
+            {                               
+                background-repeat: no-repeat;
+                background-image: linear-gradient(to top, #FFFFFF, #4d2600);
+            }
+            header
+            {
+                color:white;
+                background-image: url(6.jpg);                
+                margin: 100px;margin-top:20px;margin-bottom: 0px;                                
+                padding:2.5em;padding-top:0em;padding-bottom: 0em;
+           }
+           footer
+           {
+                font-size: 0.85em;
+                color:white;
+                background-image: url(6.jpg);
+                opacity: 0.8;               
+                margin: 100px;margin-top:20px;margin-bottom: 10px;
+                padding:1em;
+           }        
+           .nav1
+           {                               
+                opacity: 0.7;               
+           }
+            #headerBack
+            {                 
+                background-image: url(top2.jpg), url(6.jpg);   
+                background-position: left top, left top;   
+                background-repeat: no-repeat, repeat;                               
+                margin: 0;margin-top:20px;margin-bottom: 0px;                              
+                padding: 1px;                               
+            }
+            
+            #SignIn
+            {
+                float: right;               
+            }
+            
+            section 
+            {       
+                max-width: 100%;   
+                margin: 100px;margin-top:10px;margin-bottom: 20px;
+                padding: 0em;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);       
+            }
+            section 
+            {       
+/*                border:1px solid grey;    */
+
+                max-width: 100%;   
+/*                font-size: 1em;*/
+                margin: 200px;margin-top: 20px;margin-bottom: 30px;
+                text-align: center;
+                padding: 0em;
+            }
+            
+            .floating-box 
+            {   
+                float: left;    
+                width: 100px;   
+                height: 135px;   
+                margin: 20px;margin-left: 120px;margin-bottom: 0px;    
+                text-align: center;
+            }
+            
+            .floating-box ul
+            {
+                text-align: left;
+            }
+            
+            .after-box 
+            {   
+                clear: left;  
+                text-align: center;
+                margin: 100px;margin-top: 0px;margin-bottom: 10px;
+                font-size: 0.81em;
+            } 
+           
+           
+        </style>
+    </head>
+    
+    <body>
+
+        <header>          
+            <div id="headerBack">              
+                <h1 style="color: white; text-align:left; font-variant: small-caps; font-style: oblique;font-size:3em;font-weight: bold; ">                       
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Silver Coffee</h1>            
+            </div>                    
+            <div class="nav1">                 
+                <nav>            
+                    <ul class="w3-navbar w3-card-2 w3-light-grey" style="font-style: oblique;">                                      
+                        <li><a href="index.html">Home</a></li>                                               
+                        <li><a href="MoreAboutUs1.html">More About Us</a></li>                                       
+                        <li><a href="Subpage_job.html">Jobs</a></li>               
+                        <li><a href="Menu.html">Menu</a></li>                                                            
+                        <li><a href="FeedbackForm.html">Feedback Form</a></li>                 
+                        <li class="w3-dropdown-click">                                   
+                            <a onclick="myFunction()" href="#">Shop <i class="fa fa-caret-down"></i></a>                                             
+                            <div id="dropdown1" class="w3-dropdown-content w3-white w3-card-4">                                              
+                                <a href="Product1.html">Espresso</a>                                            
+                                <a href="Product2.html">Iced Coffee</a>                                             
+                                <a href="Product3.html">Decaf</a>                                            
+                                <a href="Product4.html">Single Origin</a>                                          
+                            </div>                         
+                        </li>                                
+                        <li id="SignIn"><a onclick="myFunction2()" href="#">My Account</a>                               
+                            <span id="dropdown2" class="w3-dropdown-content w3-white w3-card-4">                                          
+                                <a href="SignIn1.html">Sign In</a>                    
+                                <a href="SignupHistory.html">Sign Up History</a>                                                                      
+                            </span>                
+                        </li>        
+                    </ul>             
+                </nav>            
+            </div>        
+    </header> 
+        <section>
+        <script type="text/javascript"> 
+            function myFunction() 
+            {
+                var x = document.getElementById("dropdown1");
+                if (x.className.indexOf("w3-show") == -1) 
+                {
+                    x.className += " w3-show";
+                } 
+                else 
+                {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+            function myFunction2() 
+            {
+                var x = document.getElementById("dropdown2");
+                if (x.className.indexOf("w3-show") == -1) 
+                {
+                    x.className += " w3-show";
+                } 
+                else 
+                {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            } 
+            
+            // SignUp type
+            
+            function SignUp(customerId, username, email) 
+            {
+                this.username = username;
+                this.customerId = customerId; 
+                this.email = email;               
+            }              
+            
+            SignUp.prototype.getcustomerId = function()
+            {
+               return this.customerId;
+            }
+            SignUp.prototype.setcustomerId = function(customerId) 
+            {
+                this.customerId = customerId; 
+            }
+            SignUp.prototype.getusername = function() 
+            {
+                return this.username; 
+            }
+
+            SignUp.prototype.setusername = function(username) 
+            {
+                this.username = username; 
+            }  
+            
+            SignUp.prototype.getemail = function() 
+            {
+                return this.email; 
+            }
+            SignUp.prototype.setemail = function(email) 
+            {
+                this.email = email; 
+            }
+            
+            // customRegister type
+            function customRegister() 
+            {
+                this.registers = new Array(); 
+            }
+            customRegister.prototype.addSignUp = function(customerId, username, email) 
+            {
+                this.registers[customerId] = new SignUp(customerId,username, email);
+            }
+            customRegister.prototype.getSignUpTable = function() {
+                var register;
+            
+            var SignupTableHTML = "<table border=1>";
+            
+            for (register in this.registers) {
+                
+            SignupTableHTML += "<tr><td>";      
+            SignupTableHTML += this.registers[register].getcustomerId(); 
+            SignupTableHTML += "</td>";
+            SignupTableHTML += "<td>";
+            
+            SignupTableHTML += this.registers[register].getusername(); 
+            SignupTableHTML += "</td>";
+            
+            SignupTableHTML += "<td>";
+            SignupTableHTML += this.registers[register].getemail(); 
+            SignupTableHTML += "</td>";
+            SignupTableHTML += "</tr>";
+        }
+            SignupTableHTML += "</table>";
+            return SignupTableHTML; 
+        }
+            var SilverSignUp = new customRegister();
+            
+            SilverSignUp.addSignUp(1 , "Customer1","Customer1@Customer1.com");
+            SilverSignUp.addSignUp(2 ,"Customer2", "Customer2@Customer2.com");
+            SilverSignUp.addSignUp(3 , "Customer3","Customer3@Customer3.com");  
+            SilverSignUp.addSignUp(4 , "Customer4","Customer4@Customer4.com"); 
+            SilverSignUp.addSignUp(5 , "Customer5","Customer1@Customer5.com");
+            SilverSignUp.addSignUp(6 ,"Customer6", "Customer2@Customer6.com");
+            SilverSignUp.addSignUp(7 , "Customer7","Customer3@Customer7.com");  
+            SilverSignUp.addSignUp(8 , "Customer8","Customer4@Customer8.com"); 
+            SilverSignUp.addSignUp(9 , "Customer9","Customer1@Customer9.com");
+            SilverSignUp.addSignUp(10 ,"Customer10", "Customer2@Customer10.com");
+            SilverSignUp.addSignUp(11, "Customer11","Customer3@Customer11.com");  
+            SilverSignUp.addSignUp(12, "Customer12","Customer4@Customer12.com"); 
+            SilverSignUp.addSignUp(13, "Customer13","Customer1@Customer13.com");
+            SilverSignUp.addSignUp(14,"Customer14", "Customer2@Customer14.com");
+            SilverSignUp.addSignUp(15, "Customer15","Customer3@Customer15.com");  
+            SilverSignUp.addSignUp(16, "Customer16","Customer4@Customer16.com"); 
+            SilverSignUp.addSignUp(17 ,"Customer10", "Customer2@Customer17.com");
+            SilverSignUp.addSignUp(18, "Customer11","Customer3@Customer18.com");  
+            SilverSignUp.addSignUp(19, "Customer12","Customer4@Customer19.com"); 
+            SilverSignUp.addSignUp(20, "Customer13","Customer1@Customer20.com");
+            SilverSignUp.addSignUp(21,"Customer14", "Customer2@Customer21.com");
+            SilverSignUp.addSignUp(22,"Customer14", "Customer2@Customer22.com");
+            
+            document.write(SilverSignUp.getSignUpTable());            
+    
+        </script> 
+        
+        </section>
+        <footer>   
+        <div style="float:left;">
+            <div class="floating-box">ABOUT US
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    
+                </ul>
+            </div>
+            
+            <div class="floating-box">SHOP
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    
+                </ul>
+            </div>
+            <div class="floating-box">FOR Business
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    
+                </ul>
+            </div>
+            
+            <div class="floating-box">JOIN US ON
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+            
+        <div class="after-box">
+        <p>&copy; 24 SILVER COFFEE. All Rights Reserved.                 
+            <a href="Subpage_TermsUse.html" style="color: white">|Terms of Use |</a>                
+            <a href="Subpage_Private.html" style="color: white">|Privacy Policy |</a>                
+            <a href="TermsSale.html" style="color: white">|Terms of Sale |</a>                
+        </p>            
+        <p><a href="mailto:webmaster@24Silver.com" style="color: white">webmaster@24Silver.com</a></p>
+        </div>
+    </footer>
+    </body>
+    
+</html>

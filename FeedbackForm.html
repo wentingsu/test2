@@ -1,0 +1,414 @@
+<html>
+    <head>
+        <title> 24 Silver Home </title>
+        <link rel="icon" href="24.ico" type="image/x-icon">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        
+        <style>
+        body
+            {                               
+                background-repeat: no-repeat;
+                background-image: linear-gradient(to top, #FFFFFF, #4d2600);
+            }
+            header
+            {
+                color:white;
+                background-image: url(6.jpg);                
+                margin: 100px;margin-top:20px;margin-bottom: 0px;                                
+                padding:2.5em;padding-top:0em;padding-bottom: 0em;
+           }
+           footer
+           {
+                font-size: 0.85em;
+                color:white;
+                background-image: url(6.jpg);
+                opacity: 0.8;               
+                margin: 100px;margin-top:20px;margin-bottom: 10px;
+                padding:1em;
+           }        
+           .nav1
+           {                               
+                opacity: 0.7;               
+           }
+            #headerBack
+            {                 
+                background-image: url(top2.jpg), url(6.jpg);   
+                background-position: left top, left top;   
+                background-repeat: no-repeat, repeat;                               
+                margin: 0;margin-top:20px;margin-bottom: 0px;                              
+                padding: 1px;                               
+            }
+            #SignIn
+            {
+                float: right;               
+            }
+            
+            section 
+            {       
+                max-width: 100%;   
+                margin: 100px;margin-top:10px;margin-bottom: 20px;
+                padding: 0em;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);       
+            }
+            
+            img 
+            {
+                width: 100%                         
+            }
+            .img1
+            {
+                opacity: 1;
+            }
+            .img1:hover 
+            {
+                width: 100%;                                    
+                opacity: 0.5; 
+            }
+            
+            .floating-box 
+            {   
+                float: left;    
+                width: 100px;   
+                height: 135px;   
+                margin: 20px;margin-left: 120px;margin-bottom: 0px;    
+                text-align: center;
+            }
+            
+            .floating-box ul
+            {
+                text-align: left;
+            }
+            
+            .after-box 
+            {   
+                clear: left;  
+                text-align: center;
+                margin: 100px;margin-top: 0px;margin-bottom: 10px;
+                font-size: 0.81em;
+            } 
+            
+            form
+            {
+                color: #fff7e6;
+                margin: 100px;margin-top: 30px;margin-bottom: 10px;
+            }
+            
+            
+            section input[type="submit"],[type="reset"]
+            {   
+                width: 25%;  
+                background-color: #f3c6a5;    
+                color: white;    
+                padding: 14px 20px;    
+                margin: 8px 0 0 0;   
+                border: none;   
+                border-radius: 4px;  
+                cursor: pointer;
+                font-size:1.2em
+            }
+            section [type="submit"]:hover,[type="reset"]:hover
+            {    
+                background-color: #4d2600;
+            }
+        </style>
+    </head>
+    <body class="w3-container"> 
+        <script>
+        function validate()
+      {          
+      
+         if( document.myForm.Name.value == "" )
+         {
+            alert( "Please provide your name!" );
+            document.myForm.Name.focus() ;
+            return false;
+         }
+         
+         if( document.myForm.Age.value == "" )
+         {
+            alert( "Please choose your Age!" );
+            document.myForm.Age.focus() ;
+            return false;
+         }
+         
+          if( document.myForm.Phone.value == "" || !document.myForm.Phone.value.match(/^[0-9]+$/))
+         {
+            alert( "Please provide valide Phone!" );
+            document.myForm.Phone.focus() ;
+            return false;
+         }      
+         
+          if( document.myForm.Address.value == "" || !document.myForm.Address.value.match(/\W/))
+         {
+            alert( "Please provide valide Address!" );
+            document.myForm.Address.focus() ;
+            return false;
+         } 
+         
+         if( document.myForm.EMail.value == "" )
+         {
+            alert( "Please provide your Email!" );
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+                          
+         if( document.myForm.Country.value == "-1" )
+         {
+            alert( "Please provide your country!" );
+            return false;
+         }
+         
+         if( document.myForm.Zip.value == "" ||
+         isNaN( document.myForm.Zip.value ) ||
+         document.myForm.Zip.value.length != 5 )
+         {
+            alert( "Please provide a zip in the format #####." );
+            document.myForm.Zip.focus() ;
+            return false;
+         }
+         
+         if( document.myForm.City.value == "" )
+         {
+            alert( "Please choose your City!" );
+            document.myForm.City.focus() ;
+            return false;
+         }
+                    
+        alert( "submit successfully!" );        
+         return( true );
+         
+      }
+      
+      function myFunction() 
+            {
+                var x = document.getElementById("dropdown1");
+                if (x.className.indexOf("w3-show") == -1) 
+                {
+                    x.className += " w3-show";
+                } 
+                else 
+                {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+            function myFunction2() 
+            {
+                var x = document.getElementById("dropdown2");
+                if (x.className.indexOf("w3-show") == -1) 
+                {
+                    x.className += " w3-show";
+                } 
+                else 
+                {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }    
+
+      </script>
+      
+      <header>          
+            <div id="headerBack">              
+                <h1 style="color: white; text-align:left; font-variant: small-caps; font-style: oblique;font-size:3em;font-weight: bold; ">                       
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Silver Coffee</h1>            
+            </div>                    
+            <div class="nav1">                 
+                <nav>            
+                    <ul class="w3-navbar w3-card-2 w3-light-grey" style="font-style: oblique;">                                      
+                        <li><a href="index.html">Home</a></li>                                               
+                        <li><a href="MoreAboutUs1.html">More About Us</a></li>                                       
+                        <li><a href="Subpage_job.html">Jobs</a></li>               
+                        <li><a href="Menu.html">Menu</a></li>                                                            
+                        <li><a href="FeedbackForm.html">Feedback Form</a></li>                 
+                        <li class="w3-dropdown-click">                                   
+                            <a onclick="myFunction()" href="#">Shop <i class="fa fa-caret-down"></i></a>                                             
+                            <div id="dropdown1" class="w3-dropdown-content w3-white w3-card-4">                                              
+                                <a href="Product1.html">Espresso</a>                                            
+                                <a href="Product2.html">Iced Coffee</a>                                             
+                                <a href="Product3.html">Decaf</a>                                            
+                                <a href="Product4.html">Single Origin</a>                                          
+                            </div>                         
+                        </li>                                
+                        <li id="SignIn"><a onclick="myFunction2()" href="#">Sign in</a>                               
+                            <span id="dropdown2" class="w3-dropdown-content w3-white w3-card-4">                                          
+                                <a href="SignIn1.html">Sign In</a>                    
+                                <a href="SignupHistory.html">Sign Up History</a>                                                                      
+                            </span>                
+                        </li>        
+                    </ul>             
+                </nav>            
+            </div>        
+    </header> 
+      
+      <section>
+          
+          <form action="index.html" name="myForm" onsubmit="return(validate());" >                               
+                <h4> Customer General Information</h4>          
+                <fieldset>   
+                <legend>General information</legend>  
+                <br>
+                 Name: <input  style="opacity: 0.7;" type="text" name="Name" value="" size="16">
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 
+                 Gender: 
+                 <input type="radio" name="gender" value="male" checked> Male             
+                 <input type="radio" name="gender" value="female"> Female         
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;                
+                 
+                 <label  for="age">Age:</label>
+                 <input  style="opacity: 0.7;" type="number"  name="Age"  id="age" min="1" max="100" value="" >
+                 (Choose a number between 1 and 10)
+                 <br><br>           
+                 
+                 Phone: <input style="opacity: 0.7;" type="tel" name="Phone" value="" size="16">                                                                    
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               
+                 
+                 Email: <input style="opacity: 0.7;" type="email" name="EMail" value="" size="16">                             
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                
+                 Address:<input style="opacity: 0.7;" type="text" name="Address" value="" size="16">                               
+<!--                 (Check here if this is a new address:
+                 <input type="radio" name="address" value="Yes " checked> Yes 
+                 <input type="radio" name="address" value="No " checked> No)-->
+                 <br><br>                                         
+                                   
+                 Country: 
+                 <select style="opacity: 0.7;" name="Country">
+                     <option value="-1" selected>[choose yours]</option>
+                     <option value="1">USA</option>
+                     <option value="2">UK</option>
+                     <option value="3">INDIA</option>
+                     <option value="4">CHINA</option>
+                  </select>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                 
+                 &nbsp;&nbsp;  &nbsp;&nbsp;           
+                 
+                 Zip: <input  style="opacity: 0.7;" type="text" name="Zip" value="" size="16"> 
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;
+                 <label for="city"> City: </label> 
+                 <input style="opacity: 0.7;" type="text" name="City" id="City" list="cities" value="" size="16" >
+                 <datalist style="opacity: 0.7;" id="cities">    
+                     <option value="city1">     
+                     <option value="city2">     
+                     <option value="city3">     
+                     <option value="city4">     
+                     <option value="city5">      
+                     <option value="city6">
+                 </datalist>  
+                  
+                  <br><br>
+                  <label for="myColor">your favorite color:</label>                 
+                  <input style="opacity: 0.7;" type="color" name="myColor" id="myColor" value="">               
+                </fieldset>                                                       
+                
+            <h4> Feedback/Claim</h4>                
+            <fieldset>                   
+                <legend>Story of with 24s</legend>
+                <br>
+                <textarea style="opacity: 0.7;" name="textDescribe" rows="3" cols ="100">
+                - Please describe this incident,including dates,details and symptoms leading up to it.         
+                </textarea>
+                
+                <br><br>                
+                <label for="myChoice"> Please Choose the Satisfaction Degree: &nbsp;&nbsp;</label>                   
+                Low <input style="opacity: 0.7;" type="range" name="myChoice" id="myChoice"> High                                      
+                <br><br>
+                <label for="myDate">Choose a Date: </label><input style="opacity: 0.7;" type="date" name="myDate" id="myDate"> 
+                 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                  
+                <label for="reason"> Choose the Reason: &nbsp;</label>    
+                <input type="checkbox" name="reason" value="reason1">Reason1
+                <input type="checkbox" name="reason" value="reason2">Reason2 
+                <input type="checkbox" name="reason" value="reason3">Reason3
+                <br><br>            
+            </fieldset>                                                              
+            
+
+            <h4> Easy Ways to Submit a Claim Form</h4>            
+            <fieldset>                               
+                <legend>E-Mail: </legend>
+                <p>feedback@24Silver.com
+                    <br>
+                    scan and attach your receipts
+                </p>
+            </fieldset>
+            
+            <fieldset>                               
+                <legend>Fax: </legend> 
+                <p>1-xxx-xxx-xxxx
+                    <br>
+                    no cover sheet necessary
+                </p>
+            </fieldset>
+            
+            <fieldset>                               
+                <legend>Mail: </legend> 
+                <p>
+                    Mail 24 silver coffee
+                    <br>
+                    xxxx xxxxxx Ave MA
+                    <br>
+                    xxxxx, xxxxx xxxxx
+                </p>
+            </fieldset>   
+
+            <span><input type="submit" value="Submit">                                           
+                <input id="reset" type="reset" name="reset" value="Reset"></span>                                              
+            </form>              
+      </section>
+      
+      <footer>   
+        <div style="float:left;">
+            <div class="floating-box">ABOUT US
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    
+                </ul>
+            </div>
+            
+            <div class="floating-box">SHOP
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    
+                </ul>
+            </div>
+            <div class="floating-box">FOR Business
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    
+                </ul>
+            </div>
+            
+            <div class="floating-box">JOIN US ON
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+            
+        <div class="after-box">
+        <p>&copy; 24 SILVER COFFEE. All Rights Reserved.                 
+            <a href="Subpage_TermsUse.html" style="color: white">|Terms of Use |</a>                
+            <a href="Subpage_Private.html" style="color: white">|Privacy Policy |</a>                
+            <a href="TermsSale.html" style="color: white">|Terms of Sale |</a>                
+        </p>            
+        <p><a href="mailto:webmaster@24Silver.com" style="color: white">webmaster@24Silver.com</a></p>
+        </div>
+    </footer>  
+
+    </body>  
+    
+</html>
